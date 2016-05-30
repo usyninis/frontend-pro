@@ -27,13 +27,13 @@ var webpackConfig = {
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
     }, {
       test: /\.png$/,
-      loader: "file-loader" // !url-loader?limit=100000
+      loader: "file-loader?name=images/[hash].[ext]" // !url-loader?limit=100000
     }, {
       test: /\.jpg$/,
-      loader: "file-loader"
+      loader: "file-loader?name=images/[hash].[ext]"
     }, {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      loader: 'file-loader?name=fonts/[name].[ext]'
     }]
   },
   // resolve: { // чтобы можно было подключать require('App')
