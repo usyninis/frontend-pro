@@ -1,7 +1,7 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "frontend-pro",
   "version": "1.0.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "description": "",
   "scripts": {
     "start": "set NODE_ENV=development | node server.js",
     "build": "webpack"
