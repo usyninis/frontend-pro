@@ -8,7 +8,7 @@ export default React.createClass({
     //console.log(Route);
     return (
       <div>
-        <h1>Hell!o!</h1>
+        <h1>Hello!!!</h1>
         <Link to='/' activeClassName='active'>
           <i className='mi material-icons mi-48'>favorite_border</i>
         </Link>
