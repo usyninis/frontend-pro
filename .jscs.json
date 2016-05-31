@@ -1,0 +1,12 @@
+{
+    "preset": "google",
+  	"validateIndentation": 2,
+    "maximumLineLength": 100,
+    "requireCamelCaseOrUpperCaseIdentifiers": false,
+    "requireCurlyBraces": [
+        "while",
+        "for",
+        "do",
+        "with"
+    ]
+}

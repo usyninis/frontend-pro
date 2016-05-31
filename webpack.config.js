@@ -7,12 +7,12 @@ var precss = require('precss');
 var webpackConfig = {
   devtool: 'source-map',
   entry: {
-    index: './src/index',
+    index: './src/app-singlepage/index',
   },
   output: {
-    path: path.join(__dirname, 'dist'), // реальная папка сборки
+    path: path.join(__dirname, 'public', 'build'), // реальная папка сборки
     filename: '[name].js', // имя файла
-    publicPath: '/static/' // папка, в которой потом будет статика на продакшне
+    publicPath: '/build/' // папка, в которой потом будет статика на продакшне
   },
   module: {
     loaders: [{
@@ -54,7 +54,7 @@ switch (process.env.NODE_ENV) {
   case 'development':
     webpackConfig.devtool = 'eval';
     webpackConfig.entry.index = [
-      'webpack-dev-server/client?http://localhost:3000',
+      'webpack-dev-server/client?http://localhost:3030',
       'webpack/hot/only-dev-server',
       webpackConfig.entry.index
     ];
