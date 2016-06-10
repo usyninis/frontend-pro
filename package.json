@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "set NODE_ENV=development & node dev-server.js",
-    "build": "webpack"
+    "start": "sh bin/dev-server",
+    "build": "sh bin/build"
   },
   "repository": {
     "type": "git",
