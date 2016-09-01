@@ -7,7 +7,8 @@ var precss = require('precss');
 var webpackConfig = {
   devtool: 'source-map',
   entry: {
-    index: './src/app-singlepage/index',
+    //index: './src/app-singlepage/index',
+    index: './src/app-default/index',
   },
   output: {
     path: path.join(__dirname, 'public', 'build'), // реальная папка сборки
@@ -27,10 +28,10 @@ var webpackConfig = {
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
     }, {
       test: /\.png$/,
-      loader: "file-loader?name=images/[hash].[ext]" // !url-loader?limit=100000
+      loader: 'file-loader?name=images/[hash].[ext]' // !url-loader?limit=100000
     }, {
       test: /\.jpg$/,
-      loader: "file-loader?name=images/[hash].[ext]"
+      loader: 'file-loader?name=images/[hash].[ext]'
     }, {
       test: /\.(eot|svg|ttf|woff|woff2)$/,
       loader: 'file-loader?name=fonts/[name].[ext]'
