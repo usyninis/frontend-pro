@@ -1,7 +1,11 @@
 import React from 'react';
 import { Router, Route, Link, browserHistory } from 'react-router';
 
-import './../less/base.less';
+var Aa = (props) => {
+  return (
+    <a href="#">{props.text}</a>
+  );
+};
 
 export default React.createClass({
   render() {
@@ -9,6 +13,7 @@ export default React.createClass({
     return (
       <div>
         <h1>Hellosdasd!!!</h1>
+        <Aa text='ahaha' />
         <Link to='/' activeClassName='active'>
           <i className='mi material-icons mi-48'>favorite_border</i>
         </Link>

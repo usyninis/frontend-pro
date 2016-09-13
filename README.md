@@ -11,5 +11,5 @@ open http://localhost:3030
 
 ```
 npm install
-npm build
+npm run build
 ```

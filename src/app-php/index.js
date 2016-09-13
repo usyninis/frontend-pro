@@ -14,11 +14,11 @@ console.log('script');
 
 $(function() {
   $('div[data-react-component]').each(function() {
-		let $div = $(this);
+    let $div = $(this);
     let componentName = $div.data('react-component');
     if (ServerComponents[componentName]) {
       ReactDOM.render(React.createElement(ServerComponents[componentName], JSON.parse($div.text())), this);
-			$div.attr('hidden', false);
+      $div.attr('hidden', false);
     } else {
       console.error('error component ' + componentName);
     }
