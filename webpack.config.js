@@ -7,8 +7,8 @@ var precss = require('precss');
 var webpackConfig = {
   devtool: 'source-map',
   entry: {
-    //index: './src/app-singlepage/index',
-    index: './src/app-default/index',
+     index: './src/app-singlepage/index',
+    // index: './src/app-default/index',
   },
   output: {
     path: path.join(__dirname, 'public', 'build'), // реальная папка сборки

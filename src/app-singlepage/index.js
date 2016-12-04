@@ -6,7 +6,7 @@ import { Router, Route, Link, browserHistory } from 'react-router';
 import App from './pages/App';
 import Users from './pages/Users';
 
-import './../less/base.less';
+import './less/base.less';
 
 var NoMatch = React.createClass({
   render() {
@@ -17,6 +17,7 @@ var NoMatch = React.createClass({
     );
   }
 });
+
 
 ReactDOM.render((
   <Router history={browserHistory}>
