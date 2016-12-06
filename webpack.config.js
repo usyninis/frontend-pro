@@ -7,11 +7,11 @@ var precss = require('precss');
 var webpackConfig = {
   devtool: 'source-map',
   entry: {
-    index: './src/app-singlepage/index',
+    index: path.resolve('./src/app-singlepage/index'),
     //index: './src/app-php/index',
   },
   output: {
-    path: path.join(__dirname, 'public', 'build'), // реальная папка сборки
+    path: path.resolve('./public/build'), // реальная папка сборки
     filename: '[name].js', // имя файла
     publicPath: '/build/' // папка, в которой потом будет статика на продакшне
   },
@@ -51,35 +51,17 @@ var webpackConfig = {
   ],
 };
 
-switch (process.env.NODE_ENV) {
-  case 'development':
-    webpackConfig.devtool = 'eval';
-    webpackConfig.entry.index = [
-      'webpack-dev-server/client?http://localhost:3030',
-      'webpack/hot/only-dev-server',
-      webpackConfig.entry.index
-    ];
-    webpackConfig.plugins.push(
-      new ExtractTextPlugin('[name].css')
-    );
-    webpackConfig.plugins.push(
-      new webpack.HotModuleReplacementPlugin()
-    );
-    break;
-
-  default:
-    webpackConfig.plugins.push(
-      new ExtractTextPlugin('[name].css')
-    );
-    webpackConfig.plugins.push(
-        new webpack.optimize.UglifyJsPlugin({
-          compress: {
-            warnings:     false,
-            drop_console: true,
-            unsafe:       true
-          }
-        })
-    );
-}
+//    webpackConfig.devtool = 'eval';
+webpackConfig.entry.index = [
+  'webpack-dev-server/client?http://localhost:3030',
+  'webpack/hot/only-dev-server',
+  webpackConfig.entry.index
+];
+webpackConfig.plugins.push(
+  new ExtractTextPlugin('[name].css')
+);
+webpackConfig.plugins.push(
+  new webpack.HotModuleReplacementPlugin()
+);
 
 module.exports = webpackConfig;

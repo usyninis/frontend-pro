@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 
 import './style.less';
 
+
 var MyDiv = React.createClass({
   render() {
     return (
       <div>
-        MyDiv
+        MyDivs
       </div>
     );
   }
